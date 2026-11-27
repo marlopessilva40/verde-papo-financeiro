@@ -1,28 +1,30 @@
 # 🏦 Verde Papo Financeiro (Assistente Open Finance com MCP)
 
-Assistente conversacional desenvolvido para atuar no ecossistema de Open Finance, integrando inteligência artificial a dados bancários simulados por meio da arquitetura **MCP (Model Context Protocol)**.
+Assistente conversacional interativo desenvolvido para o ecossistema de Open Finance, integrando inteligência artificial a dados bancários por meio da arquitetura **MCP (Model Context Protocol)**.
+
+* **Aplicação Publicada:** [https://verde-papo-financeiro.lovable.app](https://verde-papo-financeiro.lovable.app)
+* **Desenvolvedor:** Marcelo Lopes da Silva
+* **Projeto:** Desafio Open Finance com MCP (Pluggy & Plaid)
 
 ---
 
-## 👨‍💻 Desenvolvedor
-- **Nome:** Marcelo Lopes da Silva
-- **Projeto:** Desafio Open Finance com MCP (Pluggy & Plaid)
-- **Aplicação Publicada:** [Acesse o Verde Papo Financeiro](https://verde-papo-financeiro.lovable.app)
+## 1. Cenário, Respostas do Assistente e Origem dos Dados
+
+* **Onde o cliente já está:** O assistente atua como um concierge financeiro integrado diretamente à interface bancária pessoal do usuário (internet banking ou aplicativo mobile), acompanhando o cliente no momento em que ele consulta saldos ou toma decisões de compra.
+* **O que o assistente responde ali:**
+  * Saldos consolidados e individuais de contas (Corrente e Poupança);
+  * Limite utilizado e fatura atual de Cartão de Crédito;
+  * Extrato de transações agrupadas por padrões de consumo;
+  * Avaliação de saúde financeira e alertas contra endividamento no rotativo.
+* **De onde vem cada dado:**
+  * **Pluggy:** Utilizada como fonte de documentação técnica, regras regulatórias e contexto do Open Finance brasileiro via servidor MCP HTTP (`https://mcp.pluggy.ai/mcp`).
+  * **Plaid:** Provedor dos dados bancários simulados em ambiente Sandbox via servidor MCP local STDIO (`mcp-server-plaid`), gerando tokens e simulando contas do *First Platypus Bank*.
 
 ---
 
-## 🎯 Cenário e Proposta de Valor
-- **Onde o cliente está:** O assistente atua como um concierge financeiro integrado diretamente à jornada do usuário (podendo operar em app bancário ou integrado ao momento de decisão financeira).
-- **O que ele responde:** Saldos consolidados de contas (Corrente e Poupança), limite e fatura de Cartão de Crédito, extrato categorizado de transações e diagnóstico de saúde financeira.
-- **De onde vem cada dado:**
-  - **Pluggy:** Fonte de documentação e contexto técnico de Open Finance brasileiro via servidor MCP (`https://mcp.pluggy.ai/mcp`).
-  - **Plaid:** Provedor de dados bancários mockados no ambiente Sandbox via servidor MCP local (`mcp-server-plaid`), gerando tokens e simulando contas do *First Platypus Bank*.
+## 2. Configuração dos Servidores MCP (Pluggy e Plaid)
 
----
-
-## ⚙️ Arquitetura e Configuração dos Servidores MCP
-
-A conexão no arquivo `cline_mcp_settings.json` foi configurada da seguinte forma:
+A integração foi configurada no arquivo de settings do Cline (`cline_mcp_settings.json`):
 
 ```json
 {
