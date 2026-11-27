@@ -13,7 +13,7 @@ Assistente conversacional desenvolvido para atuar no ecossistema de Open Finance
 
 ## 🎯 Cenário e Proposta de Valor
 - **Onde o cliente está:** O assistente atua como um concierge financeiro integrado diretamente à jornada do usuário (podendo operar em app bancário ou integrado ao momento de decisão financeira).
-- **O que ele responde:** Saldos consolidados de contas (Corrente e Poupança), limite e fatura de Cartão de Crédito, além de extrato categorizado de transações e análise de despesas.
+- **O que ele responde:** Saldos consolidados de contas (Corrente e Poupança), limite e fatura de Cartão de Crédito, extrato categorizado de transações e diagnóstico de saúde financeira.
 - **De onde vem cada dado:**
   - **Pluggy:** Fonte de documentação e contexto técnico de Open Finance brasileiro via servidor MCP (`https://mcp.pluggy.ai/mcp`).
   - **Plaid:** Provedor de dados bancários mockados no ambiente Sandbox via servidor MCP local (`mcp-server-plaid`), gerando tokens e simulando contas do *First Platypus Bank*.
